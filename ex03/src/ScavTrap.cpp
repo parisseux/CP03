@@ -6,13 +6,13 @@
 /*   By: pchatagn <pchatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 13:51:14 by pchatagn          #+#    #+#             */
-/*   Updated: 2025/07/07 12:01:16 by pchatagn         ###   ########.fr       */
+/*   Updated: 2025/07/07 14:20:10 by pchatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
+ScavTrap::ScavTrap(std::string _name) : ClapTrap(_name)
 {
     hit_point = 100;
     e_point = 50;

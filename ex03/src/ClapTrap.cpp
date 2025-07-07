@@ -6,15 +6,14 @@
 /*   By: pchatagn <pchatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:50:18 by pchatagn          #+#    #+#             */
-/*   Updated: 2025/07/07 11:22:32 by pchatagn         ###   ########.fr       */
+/*   Updated: 2025/07/07 14:18:57 by pchatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name)
+ClapTrap::ClapTrap(std::string _name) : name(_name)
 {
-    this->name = name;
     hit_point = 10;
     e_point = 10;
     damage = 0;

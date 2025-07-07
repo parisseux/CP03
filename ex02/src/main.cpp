@@ -6,12 +6,13 @@
 /*   By: pchatagn <pchatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:50:23 by pchatagn          #+#    #+#             */
-/*   Updated: 2025/07/07 10:24:00 by pchatagn         ###   ########.fr       */
+/*   Updated: 2025/07/07 13:59:31 by pchatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
@@ -23,6 +24,13 @@ int main()
     
     ScavTrap scavtrap("Mimi");
     scavtrap.attack("Marjorie");
+    scavtrap.beRepaired(3);
     scavtrap.guardGate();
+
+    FragTrap flag("Kitty");
+    flag.attack("Doggy");
+    flag.takeDamage(10);
+    flag.beRepaired(5);
+    flag.highFivesGuys();
     return (0);
 }
