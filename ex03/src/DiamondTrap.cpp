@@ -23,7 +23,6 @@ DiamondTrap::DiamondTrap(std::string _name)
     damage = FragTrap::damage;
     std::cout << "DiamondTrap " << name << " is ready to attack." << std::endl;
     std::cout << "DiamondTrap " << name << " has " << hit_point << " hit points and "<< e_point << " energy points.\n" << std::endl;
-    
 }
 
 DiamondTrap::~DiamondTrap()

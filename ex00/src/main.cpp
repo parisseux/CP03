@@ -19,15 +19,8 @@ int main()
     claptrap.beRepaired(20);
     claptrap.takeDamage(12);
     claptrap.beRepaired(10);
-    claptrap.beRepaired(1);
-    claptrap.beRepaired(1);
-    claptrap.beRepaired(1);
-    claptrap.beRepaired(1);
-    claptrap.beRepaired(1);
-    claptrap.beRepaired(1);
-    claptrap.beRepaired(1);
-    claptrap.beRepaired(1);
-    claptrap.takeDamage(30);
+    claptrap.beRepaired(8);
+    claptrap.takeDamage(40);
     claptrap.takeDamage(5);
     return (0);
 }

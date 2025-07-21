@@ -23,6 +23,7 @@ private:
     std::string name;
 
 public:
+    DiamondTrap();
     DiamondTrap(std::string _name);
     ~DiamondTrap();
 

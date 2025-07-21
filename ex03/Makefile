@@ -12,7 +12,7 @@
 
 NAME = diamondtrap
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98  -Wshadow
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC_DIR = src
 OBJ_DIR = obj

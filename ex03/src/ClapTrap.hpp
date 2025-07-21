@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pchatagn <pchatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/02 12:50:20 by pchatagn          #+#    #+#             */
-/*   Updated: 2025/07/07 14:19:08 by pchatagn         ###   ########.fr       */
+/*   Created: 2025/07/08 14:25:46 by pchatagn          #+#    #+#             */
+/*   Updated: 2025/07/08 14:25:47 by pchatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,11 @@ protected:
     int e_point;
     int damage;
 public:
-    ClapTrap(std::string _name);
-    ~ClapTrap();
-    ClapTrap(const ClapTrap& other);
+    ClapTrap();
+    ClapTrap(std::string name);
+    ClapTrap(const ClapTrap &other);
     ClapTrap& operator=(const ClapTrap& other);
+    ~ClapTrap();
     void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);

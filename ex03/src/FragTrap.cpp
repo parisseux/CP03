@@ -1,4 +1,3 @@
-
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap(std::string _name) : ClapTrap(_name)
@@ -10,7 +9,6 @@ FragTrap::FragTrap(std::string _name) : ClapTrap(_name)
     std::cout << "FragTrap " << name << " has " << hit_point << " hit points and "<< e_point << " energy points.\n" << std::endl;
 
 }
-
 
 FragTrap::~FragTrap()
 {

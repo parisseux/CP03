@@ -6,9 +6,10 @@
 /*   By: pchatagn <pchatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 13:51:06 by pchatagn          #+#    #+#             */
-/*   Updated: 2025/07/07 13:38:58 by pchatagn         ###   ########.fr       */
+/*   Updated: 2025/07/08 14:20:28 by pchatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP

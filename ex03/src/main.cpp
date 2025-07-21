@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//verifier encore quelques trucs genre copy de diamonds
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"

@@ -19,10 +19,12 @@ int main()
     claptrap.attack("Loustique");
     claptrap.beRepaired(20);
     claptrap.takeDamage(12);
-    ClapTrap copy(claptrap);
+    ClapTrap copy;
+    copy = claptrap;
     
     ScavTrap scavtrap("Mimi");
     scavtrap.attack("Marjorie");
+    scavtrap.beRepaired(2);
     scavtrap.guardGate();
     return (0);
 }
