@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pchatagn <pchatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/02 12:50:23 by pchatagn          #+#    #+#             */
-/*   Updated: 2025/07/07 10:24:00 by pchatagn         ###   ########.fr       */
+/*   Created: 2025/07/07 10:26:33 by pchatagn          #+#    #+#             */
+/*   Updated: 2025/07/08 14:21:26 by pchatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ClapTrap.hpp"
-#include "../inc/ScavTrap.hpp"
+#ifndef FragTrap_HPP
+# define FragTrap_HPP
 
-int main()
-{
-    ClapTrap claptrap("Pupuce");
-    claptrap.attack("Loustique");
-    claptrap.beRepaired(20);
-    claptrap.takeDamage(12);
-    ClapTrap copy;
-    copy = claptrap;
-    
-    ScavTrap scavtrap("Mimi");
-    scavtrap.attack("Marjorie");
-    scavtrap.beRepaired(2);
-    scavtrap.guardGate();
-    return (0);
-}
+# include "ClapTrap.hpp"
+
+class FragTrap : public ClapTrap {
+public:
+    FragTrap();
+    FragTrap(std::string name);
+    FragTrap(const FragTrap& other);
+    ~FragTrap();
+    FragTrap& operator=(const FragTrap& other);
+    void attack(const std::string& target);
+    void highFivesGuys(void);
+};
+
+#endif

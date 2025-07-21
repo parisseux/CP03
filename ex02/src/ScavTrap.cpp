@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "../inc/ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap(name)
+ScavTrap::ScavTrap() : ClapTrap()
 {
     name = "unknow";
     hit_point = 100;
@@ -31,7 +31,8 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     std::cout << "ScavTrap " << name << " has " << hit_point << " hit points and "<< e_point << " energy points.\n" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other) {
+ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other) 
+{
     std::cout << "ScavTrap copy constructor called." << std::endl;
 }
 
@@ -40,8 +41,10 @@ ScavTrap::~ScavTrap()
     std::cout << "ScavTrap " << name << " died." << std::endl;
 }
 
-ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
-    if (this != &other) {
+ScavTrap& ScavTrap::operator=(const ScavTrap& other) 
+{
+    if (this != &other) 
+    {
         ClapTrap::operator=(other);
     }
     return *this;

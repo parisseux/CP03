@@ -1,7 +1,7 @@
 
-#include "FragTrap.hpp"
+#include "../inc/FragTrap.hpp"
 
-FragTrap::FragTrap() : ClapTrap(name)
+FragTrap::FragTrap() : ClapTrap()
 {
     name = "unknown";
     hit_point = 100;
@@ -25,6 +25,20 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 FragTrap::~FragTrap()
 {
     std::cout << "Flag Trap " << name << " died." << std::endl;
+}
+
+FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other) 
+{
+    std::cout << "ScavTrap copy constructor called." << std::endl;
+}
+
+FragTrap& FragTrap::operator=(const FragTrap& other) 
+{
+    if (this != &other) 
+    {
+        ClapTrap::operator=(other);
+    }
+    return *this;
 }
 
 void FragTrap::highFivesGuys(void)

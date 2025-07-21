@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "ScavTrap.hpp"
+#include "../inc/ScavTrap.hpp"
 
 ScavTrap::ScavTrap(std::string _name) : ClapTrap(_name)
 {

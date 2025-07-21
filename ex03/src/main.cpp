@@ -12,10 +12,10 @@
 
 //verifier encore quelques trucs genre copy de diamonds
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
-#include "DiamondTrap.hpp"
+#include "../inc/ClapTrap.hpp"
+#include "../inc/ScavTrap.hpp"
+#include "../inc/FragTrap.hpp"
+#include "../inc/DiamondTrap.hpp"
 
 int main()
 {
@@ -37,6 +37,9 @@ int main()
     flag.highFivesGuys();
 
     DiamondTrap diamondtrap("Precieuse");
+    DiamondTrap diamond2(diamondtrap);
+    DiamondTrap diamond3("bella");
+    diamond3 = diamondtrap;
     diamondtrap.attack("un petit chat");
     diamondtrap.whoAmI();
     

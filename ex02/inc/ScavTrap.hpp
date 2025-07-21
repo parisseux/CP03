@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pchatagn <pchatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/02 12:50:23 by pchatagn          #+#    #+#             */
-/*   Updated: 2025/07/07 10:24:00 by pchatagn         ###   ########.fr       */
+/*   Created: 2025/07/02 13:51:06 by pchatagn          #+#    #+#             */
+/*   Updated: 2025/07/08 14:20:28 by pchatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ClapTrap.hpp"
-#include "../inc/ScavTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int main()
-{
-    ClapTrap claptrap("Pupuce");
-    claptrap.attack("Loustique");
-    claptrap.beRepaired(20);
-    claptrap.takeDamage(12);
-    ClapTrap copy;
-    copy = claptrap;
-    
-    ScavTrap scavtrap("Mimi");
-    scavtrap.attack("Marjorie");
-    scavtrap.beRepaired(2);
-    scavtrap.guardGate();
-    return (0);
-}
+# include "ClapTrap.hpp"
+
+class ScavTrap : public ClapTrap {
+public:
+    ScavTrap();
+    ScavTrap(std::string name);
+    ScavTrap(const ScavTrap& other);
+    ~ScavTrap();
+    ScavTrap& operator=(const ScavTrap& other);
+    void attack(const std::string& target);
+    void guardGate();  
+};
+
+#endif

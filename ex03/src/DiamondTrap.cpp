@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#include "../inc/DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap(std::string _name)
     : ClapTrap(_name + "_clap_name"), 
@@ -25,9 +25,32 @@ DiamondTrap::DiamondTrap(std::string _name)
     std::cout << "DiamondTrap " << name << " has " << hit_point << " hit points and "<< e_point << " energy points.\n" << std::endl;
 }
 
+DiamondTrap::DiamondTrap(const DiamondTrap& other)
+    : ClapTrap(other), ScavTrap(other), FragTrap(other), name(other.name)
+{
+    hit_point = other.hit_point;
+    e_point = other.e_point;
+    damage = other.damage;
+    std::cout << "DiamondTrap copy constructor called for " << name << std::endl;
+}
+
 DiamondTrap::~DiamondTrap()
 {
     std::cout << "DiamondTrap " << name<< " is dead.\n" << std::endl;
+}
+
+DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other) {
+    if (this != &other) {
+        ClapTrap::operator=(other);
+        ScavTrap::operator=(other);
+        FragTrap::operator=(other);
+        name = other.name;
+        hit_point = other.hit_point;
+        e_point = other.e_point;
+        damage = other.damage;
+    }
+    std::cout << "DiamondTrap assignment operator called for " << name << std::endl;
+    return *this;
 }
 
 void DiamondTrap::attack(const std::string& target)
